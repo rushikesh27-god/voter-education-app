@@ -54,15 +54,42 @@ a {
 a:hover {
   text-decoration: underline;
 }
-#chatBox {
-  text-align: left;
-  max-width: 400px;
-  margin: auto;
-}
 
 #chatBox p {
   background: #f1f1f1;
   padding: 8px;
   border-radius: 6px;
   margin: 5px 0;
+}
+#chatBox {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 10px;
+  height: 250px;
+  overflow-y: auto;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+.msg {
+  max-width: 70%;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* User */
+.user {
+  background: #2563eb;
+  color: white;
+  margin-left: auto;
+  text-align: right;
+}
+
+/* Bot */
+.bot {
+  background: #e5e7eb;
+  color: black;
+  margin-right: auto;
 }
