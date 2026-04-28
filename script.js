@@ -24,10 +24,18 @@ function chat() {
   let reply = document.getElementById("reply");
 
   if (msg.includes("vote")) {
-    reply.innerText = "Go to polling booth and cast your vote.";
-  } else if (msg.includes("age")) {
-    reply.innerText = "Minimum age is 18.";
-  } else {
-    reply.innerText = "Ask about voting or eligibility.";
+    reply.innerText = "🗳 To vote: Register → Check voter list → Visit booth → Cast vote.";
+  } 
+  else if (msg.includes("age")) {
+    reply.innerText = "📅 Minimum voting age in India is 18 years.";
+  } 
+  else if (msg.includes("id") || msg.includes("card")) {
+    reply.innerText = "🪪 You need a Voter ID (EPIC) to vote.";
+  } 
+  else if (msg.includes("where") || msg.includes("polling")) {
+    reply.innerText = "📍 Check your polling booth on https://eci.gov.in";
+  } 
+  else {
+    reply.innerText = "💡 Try asking: age, voter id, polling booth, how to vote.";
   }
 }
