@@ -35,6 +35,7 @@ input {
 
 section {
   transition: transform 0.2s;
+  text-align: center;
 }
 
 section:hover {
