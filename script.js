@@ -9,6 +9,7 @@ function checkEligibility() {
   }
 }
 
+// Quiz Function
 function answer(a) {
   let quiz = document.getElementById("quiz");
 
@@ -19,37 +20,47 @@ function answer(a) {
   }
 }
 
+
+// Chat Function
 function chat() {
   let msgInput = document.getElementById("msg");
-  let msg = msgInput.value.toLowerCase();
+  let msg = msgInput.value.trim();
   let chatBox = document.getElementById("chatBox");
 
-  if (msg.trim() === "") return;
+  if (msg === "") return;
 
-  // User message
-  chatBox.innerHTML += `<p><b>You:</b> ${msg}</p>`;
+  // Show user message
+  chatBox.innerHTML += `
+    <div class="msg user">${msg}</div>
+  `;
 
   let response = "";
+  let text = msg.toLowerCase();
 
-  if (msg.includes("vote")) {
+  if (text.includes("vote")) {
     response = "🗳️ To vote: Register → Check voter list → Visit booth → Cast your vote.";
   } 
-  else if (msg.includes("age")) {
+  else if (text.includes("age")) {
     response = "✅ Minimum voting age in India is 18 years.";
   } 
-  else if (msg.includes("id") || msg.includes("card")) {
+  else if (text.includes("id") || text.includes("card")) {
     response = "🪪 You need a Voter ID (EPIC) to vote.";
   } 
-  else if (msg.includes("where") || msg.includes("polling")) {
+  else if (text.includes("where") || text.includes("polling")) {
     response = "📍 Check your polling booth at https://eci.gov.in";
   } 
   else {
-    response = "💡 Try: age, voter id, polling booth, how to vote.";
+    response = "💡 Try asking: age, voter id, where to vote, how to vote.";
   }
 
-  // Bot reply
-  chatBox.innerHTML += `<p><b>Bot:</b> ${response}</p>`;
+  // Show bot response
+  chatBox.innerHTML += `
+    <div class="msg bot">${response}</div>
+  `;
 
   // Clear input
   msgInput.value = "";
+
+  // Auto scroll
+  chatBox.scrollTop = chatBox.scrollHeight;
 }
