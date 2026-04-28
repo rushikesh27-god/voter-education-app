@@ -54,3 +54,15 @@ a {
 a:hover {
   text-decoration: underline;
 }
+#chatBox {
+  text-align: left;
+  max-width: 400px;
+  margin: auto;
+}
+
+#chatBox p {
+  background: #f1f1f1;
+  padding: 8px;
+  border-radius: 6px;
+  margin: 5px 0;
+}
