@@ -4,13 +4,14 @@
   <title>Smart Voter Assistant India</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-  <h1>Smart Voter Assistant India</h1>
-  <p>Empowering first-time voters with clear, interactive guidance</p> 
+  <h1>Smart Voter Assistant for India</h1>
+  <p>Empowering first-time voters with clear, interactive guidance</p>
 </header>
-  <p>Made for first-time voters in India</p>
+
 <section>
   <h2>🗳 Voting Steps</h2>
   <ol>
@@ -36,13 +37,25 @@
   <p id="quiz"></p>
 </section>
 
+<!-- NEW USEFUL SECTION -->
 <section>
-  <h2>🤖 Chatbot</h2>
+  <h2>📍 Find Polling Info</h2>
+  <p>
+    Visit official site:
+    <a href="https://eci.gov.in" target="_blank">
+      Election Commission of India
+    </a>
+  </p>
+</section>
+
+<section>
+  <h2>💬 Chatbot</h2>
   <input type="text" id="msg" placeholder="Ask about voting...">
   <button onclick="chat()">Ask</button>
   <p id="reply"></p>
 </section>
 
 <script src="script.js"></script>
+
 </body>
 </html>
