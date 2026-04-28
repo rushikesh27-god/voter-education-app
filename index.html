@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Voter Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Smart Voter Assistant 🇮🇳</h1>
+  <p>Guide for first-time voters</p>
+</header>
+
+<section>
+  <h2>🗳 Voting Steps</h2>
+  <ol>
+    <li>Register as voter</li>
+    <li>Check voter list</li>
+    <li>Visit polling booth</li>
+    <li>Cast your vote</li>
+  </ol>
+</section>
+
+<section>
+  <h2>✅ Eligibility Checker</h2>
+  <input type="number" id="age" placeholder="Enter age">
+  <button onclick="checkEligibility()">Check</button>
+  <p id="result"></p>
+</section>
+
+<section>
+  <h2>🧠 Quiz</h2>
+  <p>Minimum age?</p>
+  <button onclick="answer(18)">18</button>
+  <button onclick="answer(21)">21</button>
+  <p id="quiz"></p>
+</section>
+
+<section>
+  <h2>🤖 Chatbot</h2>
+  <input type="text" id="msg" placeholder="Ask about voting...">
+  <button onclick="chat()">Ask</button>
+  <p id="reply"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
