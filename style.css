@@ -40,3 +40,10 @@ section {
 section:hover {
   transform: scale(1.02);
 }
+
+ol {
+  text-align: left;
+  display: inline-block;
+  padding-left: 20px;
+}
+
